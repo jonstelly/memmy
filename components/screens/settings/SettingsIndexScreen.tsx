@@ -6,7 +6,6 @@ import { Badge, Box, HStack, ScrollView, Text, useTheme } from "native-base";
 import React from "react";
 import { Alert, LayoutAnimation, StyleSheet, Switch } from "react-native";
 import { getBuildNumber, getVersion } from "react-native-device-info";
-import FastImage from "react-native-fast-image";
 import { Section, TableView } from "react-native-tableview-simple";
 import { deleteLog, sendLog } from "../../../helpers/LogHelper";
 import { selectAccounts } from "../../../slices/accounts/accountsSlice";

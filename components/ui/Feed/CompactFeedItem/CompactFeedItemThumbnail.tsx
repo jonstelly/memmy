@@ -4,7 +4,6 @@ import { Box, Icon, Pressable, useTheme, View, VStack } from "native-base";
 import { PostView } from "lemmy-js-client";
 import { BlurView } from "expo-blur";
 import { Ionicons } from "@expo/vector-icons";
-import FastImage from "react-native-fast-image";
 import { IconLink, IconMessages } from "tabler-icons-react-native";
 import { ExtensionType, LinkInfo } from "../../../../helpers/LinkHelper";
 import ImageModal from "../../image/ImageModal";
@@ -12,6 +11,7 @@ import { useAppSelector } from "../../../../store";
 import { selectSettings } from "../../../../slices/settings/settingsSlice";
 
 import { lemmyAuthToken, lemmyInstance } from "../../../../lemmy/LemmyInstance";
+import MImage from "../../image/MImage";
 
 function CompactFeedItemThumbnail({
   post,
@@ -76,7 +76,7 @@ function CompactFeedItemThumbnail({
                     />
                   </VStack>
                 </BlurView>
-                <FastImage
+                <MImage
                   resizeMode="cover"
                   style={styles.image}
                   source={{
@@ -87,7 +87,7 @@ function CompactFeedItemThumbnail({
             </Pressable>
           ) : (
             <Pressable onPress={onImagePress} onLongPress={onImageLongPress}>
-              <FastImage
+              <MImage
                 resizeMode="cover"
                 style={styles.image}
                 source={{
@@ -113,7 +113,7 @@ function CompactFeedItemThumbnail({
           <>
             {(post.post.thumbnail_url && (
               <>
-                <FastImage
+                <MImage
                   resizeMode="cover"
                   style={[styles.image, { opacity: 0.4 }]}
                   source={{

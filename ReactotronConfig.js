@@ -1,4 +1,4 @@
-import Reactotron from "reactotron-react-native";
+import Reactotron from "reactotron-react-js";
 import { AsyncStorage } from "@react-native-async-storage/async-storage";
 
 Reactotron.setAsyncStorageHandler(AsyncStorage)
@@ -11,7 +11,7 @@ Reactotron.setAsyncStorageHandler(AsyncStorage)
       ignoreUrls: /symbolicate|127.0.0.1/,
     },
     editor: false,
-    errors: { veto: (stackFrame) => false },
+    errors: { veto: () => false },
     overlay: false,
   })
   .connect();

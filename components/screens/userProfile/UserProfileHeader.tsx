@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 import { Box, HStack, Text, useTheme, View, VStack } from "native-base";
-import FastImage from "react-native-fast-image";
 import {
   IconCake,
   IconCalendarStar,
@@ -16,6 +15,7 @@ import { getBaseUrl } from "../../../helpers/LinkHelper";
 import { getCakeDay } from "../../../helpers/TimeHelper";
 import ProfileTabs from "./ProfileTabs";
 import { UseProfile } from "../../hooks/profile/useProfile";
+import MImage from "../../ui/image/MImage";
 
 interface IProps {
   profile: UseProfile;
@@ -41,7 +41,7 @@ function UserProfileHeader({ profile, pagerView }: IProps) {
             space={4}
           >
             {profile.profile.person.avatar ? (
-              <FastImage
+              <MImage
                 source={{
                   uri: profile.profile.person.avatar,
                 }}
@@ -60,7 +60,7 @@ function UserProfileHeader({ profile, pagerView }: IProps) {
             </VStack>
           </HStack>
           {profile.profile.person.banner ? (
-            <FastImage
+            <MImage
               resizeMode="cover"
               style={styles.banner}
               source={{

@@ -22,6 +22,7 @@
   "dependencies": {
     "@expo/react-native-action-sheet": "^4.0.1",
     "@expo/vector-icons": "^13.0.0",
+    "@expo/webpack-config": "^18.0.1",
     "@react-native-async-storage/async-storage": "^1.18.2",
     "@react-native-community/clipboard": "^1.5.1",
     "@react-native-community/slider": "^4.4.2",
@@ -81,7 +82,7 @@
     "react-native-web": "~0.18.7",
     "react-native-webview": "^13.2.2",
     "react-redux": "^8.0.7",
-    "reactotron-react-native": "^5.0.3",
+    "reactotron-react-js": "^3.3.8",
     "tabler-icons-react-native": "^2.17.1",
     "typescript": "^4.9.4"
   },

@@ -1,7 +1,6 @@
 import React from "react";
 import { GetSiteResponse } from "lemmy-js-client";
 import { HStack, Pressable, Text, useTheme, View, VStack } from "native-base";
-import FastImage from "react-native-fast-image";
 import { StyleSheet } from "react-native";
 import {
   IconChevronRight,
@@ -11,6 +10,7 @@ import {
 } from "tabler-icons-react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import MImage from "../image/MImage";
 
 interface IProps {
   site: GetSiteResponse;
@@ -39,7 +39,7 @@ function InstanceItem({ site }: IProps) {
       >
         <HStack>
           <HStack flex={1} alignItems="center" space={2}>
-            <FastImage
+            <MImage
               source={{ uri: site.site_view.site.icon }}
               style={styles.image}
             />

@@ -5,7 +5,6 @@ import { StyleSheet } from "react-native";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import FastImage from "react-native-fast-image";
 import { PanGestureHandler } from "react-native-gesture-handler";
 import Animated from "react-native-reanimated";
 import {
@@ -24,6 +23,7 @@ import { Footer, Header } from "./Layout";
 import { Metrics } from "./Metrics";
 import { Actions } from "./Actions";
 import FeedContentPreview from "../FeedContentPreview";
+import MImage from "../../image/MImage";
 
 interface FeedItemProps {
   post: PostView;
@@ -102,7 +102,7 @@ function FeedItem({ post, setPosts, recycled }: FeedItemProps) {
             <Pressable onPress={feedItem.onPress}>
               <View style={styles.community}>
                 {post.community.icon && (
-                  <FastImage source={{ uri: post.community.icon }} />
+                  <MImage source={{ uri: post.community.icon }} />
                 )}
               </View>
 

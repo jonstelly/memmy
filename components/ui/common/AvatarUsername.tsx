@@ -2,11 +2,11 @@
 import { Person } from "lemmy-js-client";
 import { Box, HStack, Text, useTheme, VStack } from "native-base";
 import React from "react";
-import FastImage from "react-native-fast-image";
 import { IconUser } from "tabler-icons-react-native";
 import { getBaseUrl } from "../../../helpers/LinkHelper";
 import { getUserFullName } from "../../../lemmy/LemmyHelpers";
 import Link from "../buttons/Link";
+import MImage from "../image/MImage";
 
 export type NameType = "admin" | "mod" | "dev" | "op";
 
@@ -130,7 +130,7 @@ function AvatarUsername({
     <HStack space={1} alignItems="center">
       {showAvatar &&
         (avatar ? (
-          <FastImage
+          <MImage
             source={{
               uri: avatar,
             }}

@@ -1,7 +1,6 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { HStack, Text, useTheme, VStack } from "native-base";
 import React, { useEffect } from "react";
-import FastImage from "react-native-fast-image";
 import {
   IconEye,
   IconHeart,
@@ -16,6 +15,7 @@ import CustomButton from "../../ui/buttons/CustomButton";
 import FeedView from "../../ui/Feed/FeedView";
 import LoadingErrorView from "../../ui/Loading/LoadingErrorView";
 import NotFoundView from "../../ui/Loading/NotFoundView";
+import MImage from "../../ui/image/MImage";
 
 function FeedsCommunityScreen({
   route,
@@ -63,7 +63,7 @@ function FeedsCommunityScreen({
       <VStack pt={10} pb={5} px={5}>
         <HStack alignItems="center" space={5}>
           {communityFeed.feed.community.community.icon ? (
-            <FastImage
+            <MImage
               source={{
                 uri: communityFeed.feed.community.community.icon,
               }}

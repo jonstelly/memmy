@@ -7,10 +7,10 @@ import {
   Text,
   useTheme,
 } from "native-base";
-import FastImage from "react-native-fast-image";
 import { Dimensions } from "react-native";
 import { truncateImageLink } from "../../../helpers/TextHelper";
 import ImageModal from "../image/ImageModal";
+import MImage from "../image/MImage";
 
 interface ImageButtonProps {
   src: string;
@@ -37,7 +37,7 @@ function ImageButton({ src }: ImageButtonProps) {
           space={2}
           my={4}
         >
-          <FastImage
+          <MImage
             style={{
               height: 50,
               width: 50,

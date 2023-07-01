@@ -1,7 +1,6 @@
 import React from "react";
 import { CommunityView } from "lemmy-js-client";
 import { HStack, Pressable, Text, useTheme, VStack } from "native-base";
-import FastImage from "react-native-fast-image";
 import { StyleSheet } from "react-native";
 import {
   IconChevronRight,
@@ -12,6 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { getBaseUrl } from "../../../helpers/LinkHelper";
 import { getCommunityFullName } from "../../../lemmy/LemmyHelpers";
+import MImage from "../image/MImage";
 
 interface IProps {
   community: CommunityView;
@@ -43,7 +43,7 @@ function TraverseItem({ community }: IProps) {
       >
         <VStack space={1}>
           <HStack space={2} alignItems="center">
-            <FastImage
+            <MImage
               source={{ uri: community.community.icon }}
               style={styles.icon}
             />

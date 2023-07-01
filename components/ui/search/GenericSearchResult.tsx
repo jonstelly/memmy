@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, HStack, Pressable, Text, useTheme, VStack } from "native-base";
-import FastImage from "react-native-fast-image";
 import { IconUser } from "tabler-icons-react-native";
 import { StyleSheet } from "react-native";
+import MImage from "../image/MImage";
 
 function GenericSearchResult({
   header,
@@ -23,7 +23,7 @@ function GenericSearchResult({
       <HStack alignItems="center" space={2} my={2}>
         <Box width={31} height={31}>
           {image ? (
-            <FastImage source={{ uri: image }} style={styles.image} />
+            <MImage source={{ uri: image }} style={styles.image} />
           ) : (
             <IconUser size={31} color={theme.colors.app.textSecondary} />
           )}

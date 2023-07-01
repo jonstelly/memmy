@@ -7,7 +7,6 @@ import * as MediaLibrary from "expo-media-library";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as ImagePicker from "expo-image-picker";
 import { PostView } from "lemmy-js-client";
-import FastImage from "react-native-fast-image";
 import { Dimensions } from "react-native";
 import { writeToLog } from "./LogHelper";
 import { ExtensionType, getLinkInfo } from "./LinkHelper";

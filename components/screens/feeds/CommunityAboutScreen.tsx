@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, Text, useTheme, VStack } from "native-base";
-import FastImage from "react-native-fast-image";
 import RenderMarkdown from "../../ui/markdown/RenderMarkdown";
+import MImage from "../../ui/image/MImage";
 
 function CommunityAboutScreen({ route }: { route: any }) {
   const theme = useTheme();
@@ -10,7 +10,7 @@ function CommunityAboutScreen({ route }: { route: any }) {
     <ScrollView flex={1} backgroundColor={theme.colors.app.bg}>
       <VStack>
         {route.params.banner && (
-          <FastImage
+          <MImage
             source={{
               uri: route.params.banner,
             }}

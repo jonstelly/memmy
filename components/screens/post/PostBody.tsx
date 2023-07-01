@@ -4,7 +4,6 @@ import React, { useMemo, useState } from "react";
 import { Dimensions, StyleSheet } from "react-native";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BlurView } from "expo-blur";
-import FastImage from "react-native-fast-image";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Ionicons } from "@expo/vector-icons";
 import moment from "moment";
@@ -14,6 +13,7 @@ import { useAppSelector } from "../../../store";
 import LinkButton from "../../ui/buttons/LinkButton";
 import RenderMarkdown from "../../ui/markdown/RenderMarkdown";
 import ImageModal from "../../ui/image/ImageModal";
+import MImage from "../../ui/image/MImage";
 
 interface PostBodyProps {
   post: PostView;
@@ -69,7 +69,7 @@ function PostBody({ post }: PostBodyProps) {
                       <Text>Sensitive content ahead</Text>
                     </VStack>
                   </BlurView>
-                  <FastImage
+                  <MImage
                     resizeMode="contain"
                     style={styles.image}
                     source={{
@@ -80,7 +80,7 @@ function PostBody({ post }: PostBodyProps) {
               </Pressable>
             ) : (
               <Pressable onPress={onImagePress} onLongPress={onImageLongPress}>
-                <FastImage
+                <MImage
                   resizeMode="contain"
                   style={styles.image}
                   source={{

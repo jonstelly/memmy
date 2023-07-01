@@ -9,7 +9,6 @@ import {
   useTheme,
   VStack,
 } from "native-base";
-import FastImage from "react-native-fast-image";
 import {
   IconArrowDown,
   IconCheck,
@@ -23,6 +22,7 @@ import {
 import MTable from "../table/MTable";
 import MCell from "../table/MCell";
 import { getBaseUrl } from "../../../helpers/LinkHelper";
+import MImage from "../image/MImage";
 
 interface IProps {
   route: any;
@@ -45,7 +45,7 @@ function InstanceScreen({ route, navigation }: IProps) {
     <ScrollView backgroundColor={theme.colors.app.bg} flex={1} p={6}>
       <VStack p={3} borderRadius={10} space={4}>
         <HStack space={2}>
-          <FastImage
+          <MImage
             source={{ uri: site.icon }}
             style={{
               height: 68,

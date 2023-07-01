@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import FastImage from "react-native-fast-image";
 import { Icon, Text, useTheme, View, VStack } from "native-base";
 import { BlurView } from "expo-blur";
 import { Ionicons } from "@expo/vector-icons";
@@ -7,6 +6,7 @@ import { StyleSheet } from "react-native";
 import { getRatio } from "../../../helpers/ImageHelper";
 import { useAppSelector } from "../../../store";
 import { selectSettings } from "../../../slices/settings/settingsSlice";
+import MImage from "./MImage";
 
 function MemoizedFastImage({
   postId,
@@ -86,8 +86,8 @@ function MemoizedFastImage({
           </VStack>
         </BlurView>
         {!source.includes(".gif") && (
-          <FastImage
-            resizeMode={FastImage.resizeMode.contain}
+          <MImage
+            resizeMode="contain"
             source={{
               uri: source,
             }}
@@ -103,8 +103,8 @@ function MemoizedFastImage({
   }
 
   return (
-    <FastImage
-      resizeMode={FastImage.resizeMode.contain}
+    <MImage
+      resizeMode="contain"
       source={{
         uri: source,
       }}
